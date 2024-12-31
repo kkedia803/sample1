@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .top-bar {
+            background: #B22222;
+            color: white;
+            padding: 8px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        .top-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .top-bar-right {
+            display: flex;
+            gap: 20px;
+        }
+
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 80px;
+            height: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            margin: auto;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-item {
+            position: relative;
+            padding: 10px 0;
+        }
+
+        .nav-item>a {
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            min-width: 200px;
+            z-index: 1;
+        }
+
+        .nav-item:hover .dropdown {
+            display: block;
+        }
+
+        .donate-btn {
+            background: #B22222;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            background-image: url("https://images.indianexpress.com/2019/08/schoolchildren-759.jpg");
+            background-color: black;
+            object-fit: contain;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px;
+            height: 100%;
+        }
+
+        .quote {
+            color: white;
+            font-size: 25px;
+            max-width: 60%;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            position: absolute;
+            left: 250px;
+        }
+
+        .hindi-text {
+            color: #FFD700;
+        }
+
+        .author {
+            color: white;
+            font-size: 18px;
+            width: 100%;
+            text-align: right;
+            margin-top: 20px;
+            margin-left: auto;
+        }
+
+        .image-right {
+            height: 300px;
+            width: auto;
+            margin-left: auto;
+            background-color: red;
+            /* padding: 10px; */
+        }
+
+        .dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <img src="https://ekalblspindia.org/wp-content/uploads/2023/10/affiliate.png" alt="icon" />
+            <span>Affiliated with Ekal Abhiyan</span>
+        </div>
+        <div class="top-bar-right">
+            <a href="#">Volunteer</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <img src="https://ekalblspindia.org/wp-content/uploads/2023/10/BLSP_LOGO_PNG-1.png" alt="Logo" class="logo" />
+
+        <div class="nav-links">
+            <div class="nav-item">
+                <a href="#">Who We Are ▼</a>
+                <div class="dropdown">
+                    <!-- Dropdown content -->
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">What We Do ▼</a>
+                <div class="dropdown">
+                    <!-- Dropdown content -->
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Achievements ▼</a>
+                <div class="dropdown">
+                    <!-- Dropdown content -->
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Media Centre ▼</a>
+                <div class="dropdown">
+                    <!-- Dropdown content -->
+                </div>
+            </div>
+        </div>
+        <a href="#" class="donate-btn">Donate Now</a>
+    </nav>
+    <div class="slider">
+        <div class="slide">
+            <div class="quote">
+                "आप सभी <span class="hindi-text">28 लाख से ज्यादा ग्रामीण आदिवासी बच्चों</span> का केवल भविष्य ही नहीं
+                बना रहे हैं बल्कि उनके माध्यम से <span class="hindi-text">राष्ट्र निर्माण</span> का कार्य भी कर रहे
+                हैं।"
+                <div class="author">
+                    - श्री नरेंद्र मोदी जी<br>
+                    प्रधानमंत्री, भारत
+                </div>
+            </div>
+            <img src="modi.png" alt="PM Modi" class="image-right" style="background-color: transparent !important;" />
+        </div>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</body>
+
+</html>
